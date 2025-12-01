@@ -7,11 +7,12 @@ export class AppError extends Error {
     this.statusCode = statusCode;
     this.isOperational = true;
     // Chỉ gọi captureStackTrace nếu chạy trong Node.js
+    const ErrorConstructor = Error as any;
     if (
-      typeof Error.captureStackTrace === "function" &&
+      typeof ErrorConstructor.captureStackTrace === "function" &&
       typeof window === "undefined"
     ) {
-      Error.captureStackTrace(this, this.constructor);
+      ErrorConstructor.captureStackTrace(this, this.constructor);
     }
   }
 }

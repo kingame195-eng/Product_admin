@@ -4,7 +4,7 @@ export declare class AuthService {
         password: string;
         fullName: string;
     }): Promise<{
-        user: import("mongoose").Document<unknown, {}, import("../users/user.model").IUser, {}, import("mongoose").DefaultSchemaOptions> & import("../users/user.model").IUser & Required<{
+        user: import("mongoose").Document<unknown, {}, import("../users/user.model").IUser, {}, {}> & import("../users/user.model").IUser & Required<{
             _id: import("mongoose").Types.ObjectId;
         }> & {
             __v: number;
@@ -27,7 +27,7 @@ export declare class AuthService {
         accessToken: any;
         refreshToken: any;
     }>;
-    getUserById(userId: string): Promise<import("mongoose").Document<unknown, {}, import("../users/user.model").IUser, {}, import("mongoose").DefaultSchemaOptions> & import("../users/user.model").IUser & Required<{
+    getUserById(userId: string): Promise<import("mongoose").Document<unknown, {}, import("../users/user.model").IUser, {}, {}> & import("../users/user.model").IUser & Required<{
         _id: import("mongoose").Types.ObjectId;
     }> & {
         __v: number;

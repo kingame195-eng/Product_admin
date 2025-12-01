@@ -13,7 +13,7 @@ interface ProductFilter {
 export declare class ProductService {
     create(data: Partial<IProduct>, userId: string): Promise<IProduct>;
     findAll(filter: ProductFilter): Promise<{
-        data: (IProduct & Required<{
+        data: (import("mongoose").FlattenMaps<IProduct> & Required<{
             _id: import("mongoose").Types.ObjectId;
         }> & {
             __v: number;

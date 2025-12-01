@@ -8,9 +8,9 @@ export interface ICategory extends Document {
     createdAt: Date;
     updatedAt: Date;
 }
-export declare const Category: mongoose.Model<ICategory, {}, {}, {}, mongoose.Document<unknown, {}, ICategory, {}, mongoose.DefaultSchemaOptions> & ICategory & Required<{
+export declare const Category: mongoose.Model<ICategory, {}, {}, {}, mongoose.Document<unknown, {}, ICategory, {}, {}> & ICategory & Required<{
     _id: mongoose.Types.ObjectId;
 }> & {
     __v: number;
-}, any, ICategory>;
+}, any>;
 //# sourceMappingURL=category.model.d.ts.map
