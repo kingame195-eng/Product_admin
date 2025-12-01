@@ -22,13 +22,19 @@ function checkEnvironment() {
 
 const connectDB = async () => {
   try {
-    console.log("[DB] Connecting to MongoDB...");
-    console.log("[DB] MONGO_URI:", process.env.MONGO_URI);
+    const mongoURI = process.env.MONGO_URI;
 
-    // Sử dụng MONGO_URI từ .env
-    await mongoose.connect(
-      process.env.MONGO_URI || "mongodb://localhost:27017/product_admin"
-    );
+    if (!mongoURI) {
+      throw new Error(
+        "❌ MONGO_URI is not set. Please configure MongoDB connection string in environment variables. " +
+        "For Railway: use MongoDB Atlas (mongodb+srv://...) or add MongoDB plugin to Railway."
+      );
+    }
+
+    console.log("[DB] Connecting to MongoDB...");
+    console.log("[DB] MONGO_URI:", mongoURI.replace(/:[^:]*@/, ":***@")); // Mask password
+
+    await mongoose.connect(mongoURI);
     console.log("✅ MongoDB connected successfully");
   } catch (error) {
     console.error("❌ MongoDB connection failed:", error);
