@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "ts-node-dev --respawn --transpile-only src/server.ts",
-    "build": "./node_modules/.bin/tsc",
+    "build": "tsc",
     "start": "node dist/server.js",
     "seed": "ts-node-dev --transpile-only src/seed.ts",
     "test-db": "ts-node-dev --transpile-only src/test-connection.ts",
