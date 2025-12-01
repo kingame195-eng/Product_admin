@@ -1,0 +1,58 @@
+/* UserDashboard Styles */
+
+.container {
+  padding: 24px;
+}
+
+.header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  margin-bottom: 24px;
+}
+
+.headerContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.headerContent h1 {
+  color: white;
+  margin: 0;
+}
+
+.headerContent p {
+  color: #e0e0e0;
+  margin: 8px 0 0 0;
+}
+
+.role {
+  font-size: 16px;
+  font-weight: bold;
+  color: #667eea;
+  margin: 8px 0;
+}
+
+.feature {
+  padding: 16px;
+  border-radius: 8px;
+  background: #f5f5f5;
+  text-align: center;
+}
+
+.feature h3 {
+  margin: 0 0 8px 0;
+  font-size: 16px;
+}
+
+.feature p {
+  margin: 0;
+  color: #666;
+  font-size: 14px;
+}
+
+.divider {
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid #f0f0f0;
+}
