@@ -27,7 +27,7 @@ const connectDB = async () => {
     if (!mongoURI) {
       throw new Error(
         "❌ MONGO_URI is not set. Please configure MongoDB connection string in environment variables. " +
-        "For Railway: use MongoDB Atlas (mongodb+srv://...) or add MongoDB plugin to Railway."
+          "For Railway: use MongoDB Atlas (mongodb+srv://...) or add MongoDB plugin to Railway."
       );
     }
 
