@@ -4,7 +4,6 @@
     "start:all": "concurrently \"npm --prefix backend run dev\" \"npm --prefix frontend run dev\""
   },
   "devDependencies": {
-    "concurrently": "^9.2.1",
-    "typescript": "^5.9.3"
+    "concurrently": "^9.2.1"
   }
 }
